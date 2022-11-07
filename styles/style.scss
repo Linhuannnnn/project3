@@ -1,0 +1,521 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC",sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: normal;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: #000;
+  box-shadow: 0 3px 5px 1px #757474;
+
+
+  div.logo{
+    display: flex;
+    align-items: center;
+    flex-grow: 5;
+    flex-shrink: 1;
+    flex-basis: 400px;
+    margin-left: 1rem;
+    color: #FFF;
+
+    img{
+      width: 15vw;
+      height: 6vw;
+    }
+  }
+
+  nav{
+    flex: 2 1 400px;
+    ul{
+      display: flex;
+      list-style-type: none;
+      justify-content: space-around;
+      li{
+        a{
+          color: #FFF;
+          text-decoration: none;
+          font-size: 1.35rem;
+        }
+      }
+    }
+  }
+}
+
+main{
+  // HOME
+  section.backImg{
+  
+    background-image: url(../Pictures/cBE56mQPnfQZMyKML8osBtklpk.png);
+    min-height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    // 设定了一个定位元素及其后代元素或flex 项目的z-order。 当元素之间重叠的时候，z-index 较大的元素会覆盖较小的元素在上层进行显示。
+    z-index: 0;
+    div.filter{
+      background-color: rgba(0,0,0,0.1);
+      width: 100%;
+      min-height: 90vh;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      h3{
+        font-size: 3.5rem;
+        color: #FFF;
+        margin: 2rem 0;
+        // 外暈
+        text-shadow: #757474 1px 0 10px;
+      }
+
+      button.start{
+        // background:linear-gradient(to bottom,#e28e27,#fdbf73);
+        background-color: #f5b565;
+        padding: 0.75rem 1.5rem;
+        font-size: 1.5rem;
+        color: #FFF;
+        border: none;
+        border-radius: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  section.second{
+    // min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h2{
+      font-size: 2rem;
+      margin: 2rem 0;
+    }
+    section.cards{
+      display: flex;
+      // border: 2px solid red;
+      width: 80%;
+      // 從h改為mh以免導覽列上浮(原因為固定高度導致島俺界上浮)
+      min-height: 80vh;
+      flex-wrap: wrap;
+
+      h4{
+        font-size: 2rem;
+        margin: 1rem 0;
+      }
+
+      p{
+        font-size: 1.25rem;
+        margin: 1rem 0;
+      }
+      
+      a{
+        text-decoration: none;
+        padding: 1rem 1.5rem;
+        background-color: #e28e27;
+        color: #FFF;
+        font-size: 1.25rem;
+        margin: 1rem 0;
+      }
+
+      div.card{
+        // border: 2px solid blue;  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 1rem;
+        flex: 1 1 300px;
+
+        // 縮放效果
+        div.image-container{
+          width: 15vw;
+          height: 15vw;
+          border-radius: 50%;
+          // margin: 1rem 0;
+          overflow: hidden;
+          
+          img{
+            width: 15vw;
+            height: 15vw;
+            border-radius: 50%;
+            // 慢速放大
+            transition: all 0.2S;
+          }
+          img:hover{
+              transform: scale(1.2);
+          }
+        }
+          
+      }
+    }
+  }
+
+  // ABOUT
+  section.players{
+    display: flex;
+    
+    div.easy{
+      background-image: url(../Pictures/8CHfpZKxwDs6jgcoCpm9KFLWwQ.jpg);
+      background-size: cover;
+      background-position: center;
+      border: 2px solid black;
+      height: 80vh;
+      width: 50%;
+      position: relative;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      h1{
+        color: #FFF;
+        font-size: 2rem;
+        position: absolute;
+        top: 85%;
+        text-align: center;
+        text-shadow: #757474 1px 0 10px;
+        span.st{
+          font-size: 1.5rem;
+        }
+      }
+    }
+    div.hard{
+      background-image: url(../Pictures/8Tzgu6b.jpg);
+      background-size: cover;
+      background-position: center;
+
+      border: 2px solid black;
+      position: relative;
+      height: 80vh;
+      width: 50%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      h1{
+        color: #FFF;
+        font-size: 2rem;
+        position: absolute;
+        top: 85%;
+        text-align: center;
+        text-shadow: #757474 1px 0 10px;
+        span.st{
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  
+  section.story{
+    background-color: #000;
+    div.storys{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      img{
+        width: 100%;
+      }
+      
+      h1{
+        margin: 10px 0;
+        color: #FFF;
+        font-size: 2rem;
+      }
+      p{
+        color: #FFF;
+        font-size: 1.25rem;
+        margin: 10px 0;
+      }
+    }
+
+    div.other{
+      display: flex;
+      margin-top: 100px;
+      padding-bottom: 80px;
+      align-items: center;
+      flex-wrap: wrap;
+
+      div.p{
+       h1{
+        color: #FFF;
+        font-size: 2rem;
+        margin-left: 50px;
+        }
+        p{
+          color: #FFF;
+          font-size: 1.25rem;
+          margin-left: 80px;
+          margin-top: 10px;
+        }
+      }
+     
+      img{
+        width: 350px;
+        height: 350px;
+        margin-left: 200px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  // Login
+  section.login{
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+    
+    
+    div.Form{
+      border: 2px solid #757474;
+      border-radius: 5px;
+      margin-top: 60px;
+      width: 500px;
+      height: 300px;
+
+      form{
+        position: relative;
+        
+        table.Table{
+          width: 100%;
+          border-collapse: collapse;
+          margin: 10px 0;
+
+          caption{
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+          }
+
+        td{
+            padding: 10px 10px;
+            width: 10em;
+          }
+          th{
+            width: 6em;
+            text-align: right;
+          }
+        }
+
+        input.FormBtn{
+          position: absolute;
+          left: 42%;
+          width: 100px;
+          height: 30px;
+
+          background-color: #f0f0f0;
+          border-radius: 5px;
+          border: 1px solid #b1b1b1;
+        }
+
+        input.FormBtn:hover {
+          background-color:#b1b1b1
+        }       
+      }
+
+
+    }
+
+
+  }
+
+  //聯絡
+  section.connect{
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+    
+    
+    div.Form{
+      border: 2px solid #757474;
+      border-radius: 5px;
+      margin-top: 60px;
+      width: 500px;
+      height: 300px;
+
+      form{
+        position: relative;
+        
+        table.Table{
+          width: 100%;
+          border-collapse: collapse;
+          margin: 10px 0;
+
+          caption{
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+          }
+
+        td{
+            padding: 10px 10px;
+            width: 10em;
+          }
+          th{
+            width: 6em;
+            text-align: right;
+          }
+        }
+
+        .FormBtn input{
+          position: absolute;
+          left: 42%;
+          width: 100px;
+          height: 30px;
+          
+          background-color: #f0f0f0;
+          border-radius: 5px;
+          border: 1px solid #b1b1b1;
+        }
+
+        .FormBtn input:hover {
+          background-color:#b1b1b1
+        }       
+      }
+
+
+    }
+  }
+}
+
+footer{
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 25vh;
+  justify-content: space-around;
+  background-color: #000;
+  div.logo{
+    display: flex;
+    align-items: center;
+    img{
+      width: 12vw;
+      height: 6vw;
+    }
+  }
+
+  nav{
+    width: 30%;
+    ul{
+      display: flex;
+      list-style-type: none;
+      width: 100%;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      li{
+        flex-basis: 100px;
+        a{
+          color: white;
+          font-weight: 600;
+          text-decoration: none;
+          font-size: 1.35rem;
+        }
+      }
+    }
+  }
+
+  section.links{
+    margin-top: 1rem;
+    a{
+      margin: 0 1rem;
+      img{
+        width: 5vw;
+        height: 5vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  main{
+    section.second{
+      section.cards{
+        div.card{
+          img{
+            width: 40vw;
+            height: 40vw;
+          }
+        }
+      }
+    }
+  }
+    
+}
+
+@media screen and (max-width: 550px) {
+  header{
+    div.logo{
+      margin-left: 0.5rem;
+      img{
+        width: 15vw;
+        height: 10vw;
+      }
+    }
+  }  
+
+  footer{
+    div.logo{
+      img{
+        width: 15vw;
+        height: 10vw;
+      }
+    }
+    section.links{
+      margin-top: 1rem;
+      a{
+        img{
+          width: 10vw;
+          height: 10vw;
+        }
+      }
+    }
+  }
+}
+
+
+// 卷軸設定
+/* width */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #838383;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3c3c3c;
+}

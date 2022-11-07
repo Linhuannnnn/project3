@@ -1,0 +1,422 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: #000;
+  box-shadow: 0 3px 5px 1px #757474;
+}
+header div.logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 5;
+  flex-shrink: 1;
+  flex-basis: 400px;
+  margin-left: 1rem;
+  color: #FFF;
+}
+header div.logo img {
+  width: 15vw;
+  height: 6vw;
+}
+header nav {
+  flex: 2 1 400px;
+}
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+header nav ul li a {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 1.35rem;
+}
+
+main section.backImg {
+  background-image: url(../Pictures/cBE56mQPnfQZMyKML8osBtklpk.png);
+  min-height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+}
+main section.backImg div.filter {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-height: 90vh;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main section.backImg div.filter h3 {
+  font-size: 3.5rem;
+  color: #FFF;
+  margin: 2rem 0;
+  text-shadow: #757474 1px 0 10px;
+}
+main section.backImg div.filter button.start {
+  background-color: #f5b565;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.5rem;
+  color: #FFF;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+main section.second {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+main section.second h2 {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+main section.second section.cards {
+  display: flex;
+  width: 80%;
+  min-height: 80vh;
+  flex-wrap: wrap;
+}
+main section.second section.cards h4 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+main section.second section.cards p {
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+main section.second section.cards a {
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  background-color: #e28e27;
+  color: #FFF;
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+main section.second section.cards div.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  flex: 1 1 300px;
+}
+main section.second section.cards div.card div.image-container {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  overflow: hidden;
+}
+main section.second section.cards div.card div.image-container img {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  transition: all 0.2S;
+}
+main section.second section.cards div.card div.image-container img:hover {
+  transform: scale(1.2);
+}
+main section.players {
+  display: flex;
+}
+main section.players div.easy {
+  background-image: url(../Pictures/8CHfpZKxwDs6jgcoCpm9KFLWwQ.jpg);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid black;
+  height: 80vh;
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main section.players div.easy h1 {
+  color: #FFF;
+  font-size: 2rem;
+  position: absolute;
+  top: 85%;
+  text-align: center;
+  text-shadow: #757474 1px 0 10px;
+}
+main section.players div.easy h1 span.st {
+  font-size: 1.5rem;
+}
+main section.players div.hard {
+  background-image: url(../Pictures/8Tzgu6b.jpg);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid black;
+  position: relative;
+  height: 80vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main section.players div.hard h1 {
+  color: #FFF;
+  font-size: 2rem;
+  position: absolute;
+  top: 85%;
+  text-align: center;
+  text-shadow: #757474 1px 0 10px;
+}
+main section.players div.hard h1 span.st {
+  font-size: 1.5rem;
+}
+main section.story {
+  background-color: #000;
+}
+main section.story div.storys {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main section.story div.storys img {
+  width: 100%;
+}
+main section.story div.storys h1 {
+  margin: 10px 0;
+  color: #FFF;
+  font-size: 2rem;
+}
+main section.story div.storys p {
+  color: #FFF;
+  font-size: 1.25rem;
+  margin: 10px 0;
+}
+main section.story div.other {
+  display: flex;
+  margin-top: 100px;
+  padding-bottom: 80px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main section.story div.other div.p h1 {
+  color: #FFF;
+  font-size: 2rem;
+  margin-left: 50px;
+}
+main section.story div.other div.p p {
+  color: #FFF;
+  font-size: 1.25rem;
+  margin-left: 80px;
+  margin-top: 10px;
+}
+main section.story div.other img {
+  width: 350px;
+  height: 350px;
+  margin-left: 200px;
+  border-radius: 50%;
+}
+main section.login {
+  display: flex;
+  justify-content: center;
+  height: 60vh;
+}
+main section.login div.Form {
+  border: 2px solid #757474;
+  border-radius: 5px;
+  margin-top: 60px;
+  width: 500px;
+  height: 300px;
+}
+main section.login div.Form form {
+  position: relative;
+}
+main section.login div.Form form table.Table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+main section.login div.Form form table.Table caption {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+main section.login div.Form form table.Table td {
+  padding: 10px 10px;
+  width: 10em;
+}
+main section.login div.Form form table.Table th {
+  width: 6em;
+  text-align: right;
+}
+main section.login div.Form form input.FormBtn {
+  position: absolute;
+  left: 42%;
+  width: 100px;
+  height: 30px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  border: 1px solid #b1b1b1;
+}
+main section.login div.Form form input.FormBtn:hover {
+  background-color: #b1b1b1;
+}
+main section.connect {
+  display: flex;
+  justify-content: center;
+  height: 60vh;
+}
+main section.connect div.Form {
+  border: 2px solid #757474;
+  border-radius: 5px;
+  margin-top: 60px;
+  width: 500px;
+  height: 300px;
+}
+main section.connect div.Form form {
+  position: relative;
+}
+main section.connect div.Form form table.Table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+main section.connect div.Form form table.Table caption {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+main section.connect div.Form form table.Table td {
+  padding: 10px 10px;
+  width: 10em;
+}
+main section.connect div.Form form table.Table th {
+  width: 6em;
+  text-align: right;
+}
+main section.connect div.Form form .FormBtn input {
+  position: absolute;
+  left: 42%;
+  width: 100px;
+  height: 30px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  border: 1px solid #b1b1b1;
+}
+main section.connect div.Form form .FormBtn input:hover {
+  background-color: #b1b1b1;
+}
+
+footer {
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 25vh;
+  justify-content: space-around;
+  background-color: #000;
+}
+footer div.logo {
+  display: flex;
+  align-items: center;
+}
+footer div.logo img {
+  width: 12vw;
+  height: 6vw;
+}
+footer nav {
+  width: 30%;
+}
+footer nav ul {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+footer nav ul li {
+  flex-basis: 100px;
+}
+footer nav ul li a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.35rem;
+}
+footer section.links {
+  margin-top: 1rem;
+}
+footer section.links a {
+  margin: 0 1rem;
+}
+footer section.links a img {
+  width: 5vw;
+  height: 5vw;
+}
+
+@media screen and (max-width: 700px) {
+  main section.second section.cards div.card img {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+@media screen and (max-width: 550px) {
+  header div.logo {
+    margin-left: 0.5rem;
+  }
+  header div.logo img {
+    width: 15vw;
+    height: 10vw;
+  }
+  footer div.logo img {
+    width: 15vw;
+    height: 10vw;
+  }
+  footer section.links {
+    margin-top: 1rem;
+  }
+  footer section.links a img {
+    width: 10vw;
+    height: 10vw;
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #838383;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3c3c3c;
+}/*# sourceMappingURL=style.css.map */
